@@ -1,3 +1,18 @@
+## Modifications
+
+This is a hacked version of old Facebook SDK for support the new API URLs. 
+
+You can specify the API version before you require the facebook.php with define:
+
+
+```
+define('FACEBOOK_API_VERSION', '2.3');
+```
+
+By default API 2.1 is used. See the changelog for support informations: https://developers.facebook.com/docs/apps/changelog
+
+
+
 ### New SDK Released
 
 We've released version 4 of the Facebook SDK for PHP here: [https://github.com/facebook/facebook-php-sdk-v4](https://github.com/facebook/facebook-php-sdk-v4)

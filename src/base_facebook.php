@@ -22,6 +22,10 @@ if (!function_exists('json_decode')) {
   throw new Exception('Facebook needs the JSON PHP extension.');
 }
 
+if (!defined('FACEBOOK_API_VERSION')) {
+  define('FACEBOOK_API_VERSION', '2.1');
+}
+
 /**
  * Thrown when an API call returns an exception.
  *
@@ -165,8 +169,8 @@ abstract class BaseFacebook
     'api'         => 'https://api.facebook.com/',
     'api_video'   => 'https://api-video.facebook.com/',
     'api_read'    => 'https://api-read.facebook.com/',
-    'graph'       => 'https://graph.facebook.com/',
-    'graph_video' => 'https://graph-video.facebook.com/',
+    'graph'       => 'https://graph.facebook.com/v' . FACEBOOK_API_VERSION . '/',
+    'graph_video' => 'https://graph-video.facebook.com/v' . FACEBOOK_API_VERSION . '/',
     'www'         => 'https://www.facebook.com/',
   );
 
